@@ -1,8 +1,13 @@
 {
   "name": "keety",
   "version": "1.0.0",
+  "private": true,
   "description": "Simple web app to demonstrate MVC design pattern",
   "main": "app.js",
+  "engines": {
+    "node": "~4.3.2",
+    "npm": "~2.14.12"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
