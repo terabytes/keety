@@ -24,7 +24,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-var server = app.listen(app.get('port'), function() {
+var server = app.listen(process.env.PORT || 60000, function() {
   console.log('Express server listening on port ' + server.address().port);
 })
 
