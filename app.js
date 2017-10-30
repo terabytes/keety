@@ -20,8 +20,8 @@ var users = require('./app_server/routes/users');
 app.set('views', path.join(__dirname, 'app_server','views'));
 app.set('view engine', 'jade');
 
-if(app.get('env') === 'development') {
-  app.set('port', process.env.PORT || 60000);
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
 }
 
 var server = app.listen(app.get('port'), function() {
