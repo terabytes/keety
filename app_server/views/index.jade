@@ -12,6 +12,17 @@ block content
             p.primary-text.text-center Click below to get a keety.
         .row.card-block
           .col-md-6.col-centered
-            a#kitty.btn-a.text-center(href="/meow")
+            a#kitty.btn-a.text-center(href="#" onClick="playSound()")
               .btn.charcoal-bgd.btn-primary.center-block
                 p Gimmeh keety pls
+  script.
+    function playSound() {
+      var path = "/images/cat.mp3";
+      var sound = new Audio(path);
+      sound.addEventListener('ended', redirectHandler, false);
+      sound.play();
+    }
+
+    function redirectHandler() {
+      window.location = "/meow";
+    }
