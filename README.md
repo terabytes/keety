@@ -1,2 +1,2 @@
 # keety
-Simple web app to demonstrate MVC design pattern
+Simple [web app](https://keety.herokuapp.com/) to demonstrate MVC design pattern
