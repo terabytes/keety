@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .row
+    .card-columns.white-bgd.card-shadow.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+      .card
+        .row.card-header
+          h1.card-title.text-center= title
+          p.primary-text.text-center Your random keety is below
+        .row.card-block
+          img.img-fluid.center-block.animated.jello(src="#{link}", alt="Gif of random cat")
+        .row.card-block
+          .col-md-6.col-centered
+            p.primary-text.primary-color.text-center= clue
+            a#kitty.btn-a.text-center(href="#" onClick="playSound(#{views})")
+              .btn.charcoal-bgd.btn-primary.center-block
+                p Anotha 1!
+  script.
+    function playSound(views) {
+      var path = "/images/another1.mp3";
+      var sound = new Audio(path);
+      sound.addEventListener('ended', redirectHandler, false);
+      
+      if (views < 3) {
+        sound.play();
+      } else {
+        redirectHandler();
+      }
+    }
+
+    function redirectHandler() {
+      window.location = "/meow";
+    }

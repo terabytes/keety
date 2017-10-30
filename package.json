@@ -1,0 +1,32 @@
+{
+  "name": "keety",
+  "version": "1.0.0",
+  "description": "Simple web app to demonstrate MVC design pattern",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "express": "^4.16.2",
+    "express-favicon": "^2.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terabytes/keety.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terabytes/keety/issues"
+  },
+  "homepage": "https://github.com/terabytes/keety#readme"
+}

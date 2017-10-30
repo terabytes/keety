@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .row
+    .card-columns.white-bgd.card-shadow.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+      .card
+        .row.card-header
+          h1.card-title.text-center= title
+          img#toy.img-fluid.center-block.animated.jello(src="/images/toy.svg", alt="Image of cat toy")
+          img#logo.img-fluid.center-block.animated.jello(src="/images/keety.jpg", alt="Image of cat playing")
+        .row.card-block
+            p.primary-text.text-center Click below to get a keety.
+        .row.card-block
+          .col-md-6.col-centered
+            a#kitty.btn-a.text-center(href="/meow")
+              .btn.charcoal-bgd.btn-primary.center-block
+                p Gimmeh keety pls
