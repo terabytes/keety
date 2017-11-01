@@ -48,7 +48,7 @@ var renderKitteh = function(err, req, res, responseBody){
     req.session.views = 1
   }
 
-  var option = Math.floor(Math.random() * 5);
+  var option = Math.floor(Math.random() * 6);
 
   console.log(option);
 
@@ -56,9 +56,10 @@ var renderKitteh = function(err, req, res, responseBody){
 
   switch(option) {
     case 0:
+    case 1:
       url = "http://cataas.com/cat/cute/says/"+responseBody.phrase;
       break;
-    case 1:
+    case 2:
       url = "http://cataas.com/cat/cute";
       break;
     default:
