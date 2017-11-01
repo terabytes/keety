@@ -9,7 +9,7 @@ Simple [web app](https://keety.herokuapp.com/) to demonstrate MVC design pattern
 │   └── routes
 ├── app_server                  
 │   ├── controllers
-│   │   └── main.js             # App logic for controller
+│   │   └── main.js             # App logic for ctrlr
 │   ├── routes
 │   └── views                   # Templates for view
 │       └── kitteh.jade
