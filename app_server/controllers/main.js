@@ -1,10 +1,42 @@
-/* Controller for home/landing/menu page */
+var request = require('request');
+
+var apiOptions = {
+  server: "http://localhost:60000"
+};
+
+if (process.env.NODE_ENV === 'production') {
+  apiOptions.server = "http://keety.herokuapp.com";
+}
+
+/* Controller for rendering home/landing/menu page */
 module.exports.home = function(req, res){
   res.render('index', {title: 'Keety Grabber'});
 };
 
+module.exports.loadKitty = function (req, res){
+var requestOptions, path;
+
+  path = '/api/hellos';
+
+  requestOptions = {
+    url: apiOptions.server + path,
+    method: "GET",
+    json: {},
+    qs: {}
+  };
+
+  request(
+    requestOptions,
+    function(err, response, body) {
+      renderKitteh(err, req, res, body);
+    }
+  );
+};
+
 /* Controller for home/landing/menu page */
-module.exports.kitteh = function(req, res){
+var renderKitteh = function(err, req, res, responseBody){
+  console.log(responseBody.phrase);
+
   var clue = "";
 
   if (req.session.views) {
@@ -24,7 +56,7 @@ module.exports.kitteh = function(req, res){
 
   switch(option) {
     case 0:
-      url = "http://cataas.com/cat/cute/says/hello";
+      url = "http://cataas.com/cat/cute/says/"+responseBody.phrase;
       break;
     case 1:
       url = "http://cataas.com/cat/cute";
