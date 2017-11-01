@@ -11,8 +11,8 @@ Simple [web app](https://keety.herokuapp.com/) to demonstrate MVC design pattern
 │   ├── controllers
 │   │   └── main.js             # App logic for ctrlr
 │   ├── routes
-│   └── views                   # Templates for view
-│       └── kitteh.jade
+│   └── views                   
+│       └── kitteh.jade         # Templates for view
 ├── node_modules                
 ├── public                     
 ├── app.js                      
