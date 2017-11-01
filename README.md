@@ -2,7 +2,7 @@
 Simple [web app](https://keety.herokuapp.com/) to demonstrate MVC design pattern
 
 ```
-├── app_api                     # API code
+├── app_api                     
 │   ├── controllers
 │   ├── models
 │   │   └── helloPhrases.js     # Schema for db
@@ -13,9 +13,9 @@ Simple [web app](https://keety.herokuapp.com/) to demonstrate MVC design pattern
 │   ├── routes
 │   └── views                   # Templates for view
 │       └── kitteh.jade
-├── node_modules                # Packages for your app
-├── public                      # Static files such as imgs, css, js
-├── app.js                      # App starts here
-├── package.json                # Config file
+├── node_modules                
+├── public                     
+├── app.js                      
+├── package.json                
 └── README.md
 ```
