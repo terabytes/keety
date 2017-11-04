@@ -67,6 +67,7 @@ input.login:focus {
 
 .card-block {
   padding-bottom: 1.2em;
+  overflow: auto;
 }
 
 .login-title {
