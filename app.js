@@ -12,7 +12,8 @@ var app = express();
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // Use the session middleware
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true,
+    saveUninitialized: true}))
 
 var routes = require('./app_server/routes/index');
 var routesApi = require('./app_api/routes/index');

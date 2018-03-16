@@ -10,6 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 
 /* Controller for rendering home/landing/menu page */
 module.exports.home = function(req, res){
+  req.session.views = 0;
   res.render('index', {title: 'Keety Grabber'});
 };
 
@@ -41,6 +42,7 @@ var renderKitteh = function(err, req, res, responseBody){
 
   if (req.session.views) {
     req.session.views++
+    console.log("Views: " + req.session.views);
     if(req.session.views == 3) {
       clue = "We don't want to hear that too much...";
     }
@@ -48,7 +50,7 @@ var renderKitteh = function(err, req, res, responseBody){
     req.session.views = 1
   }
 
-  var option = Math.floor(Math.random() * 6);
+  var option = Math.floor(Math.random() * 7);
 
   console.log(option);
 
@@ -66,7 +68,7 @@ var renderKitteh = function(err, req, res, responseBody){
       url = "http://cataas.com/cat/gif";
       break;
   }
-  
+
   res.render('kitteh', {
     title: 'Your Kitteh',
     link: url,

@@ -12,15 +12,16 @@ block content
         .row.card-block
           .col-md-6.col-centered
             p.primary-text.primary-color.text-center= clue
-            a#kitty.btn-a.text-center(href="#" onClick="playSound(#{views})")
+            a#kitty.btn-a.text-center(href="/meow" onClick="playSound(#{views})")
               .btn.charcoal-bgd.btn-primary.center-block
                 p Anotha 1!
   script.
     function playSound(views) {
+      debugger;
       var path = "/images/another1.mp3";
       var sound = new Audio(path);
       sound.addEventListener('ended', redirectHandler, false);
-      
+
       if (views < 3) {
         sound.play();
       } else {
