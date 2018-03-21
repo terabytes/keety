@@ -124,12 +124,12 @@ input.login:focus {
   border: none;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, #kitty:hover {
   background-color: #E06968;
   border: none;
 }
 
-.btn-a, .btn-a:active, .btn-a:hover, .btn-a:focus, .btn-a:active:focus, .btn-a:active:hover {
+.btn-a, .btn-a:active, .btn-a:hover, .btn-a:focus, .btn-a:active:focus, .btn-a:active:hover, #kitty:hover {
   text-decoration: none;
 }
 
