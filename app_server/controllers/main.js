@@ -59,13 +59,13 @@ var renderKitteh = function(err, req, res, responseBody){
   switch(option) {
     case 0:
     case 1:
-      url = "http://cataas.com/cat/cute/says/"+responseBody.phrase;
+      url = "https://cataas.com/cat/cute/says/"+responseBody.phrase;
       break;
     case 2:
-      url = "http://cataas.com/cat/cute";
+      url = "https://cataas.com/cat/cute";
       break;
     default:
-      url = "http://cataas.com/cat/gif";
+      url = "https://cataas.com/cat/gif";
       break;
   }
 
