@@ -7,9 +7,10 @@ block content
         .row.card-header
           a(href="/", style="text-decoration: none")
             h1.card-title.text-center= title
-          p.primary-text.text-center Your random keety is below
+          p.primary-text.text-center Your random keety is below. Click button below for more.
         .row.card-block
-          img.img-responsive.center-block.animated.jello(src="#{link}", alt="Gif of random cat")
+          #loader
+          img.img-responsive.center-block.animated.jello.hidden#kitty-img(src="#{link}", alt="Gif of random cat")
         .row.card-block
           .col-md-6.col-centered
             p.primary-text.primary-color.text-center= clue
@@ -21,3 +22,8 @@ block content
     function redirectHandler() {
       window.location.href = window.location.href;
     }
+
+    $(window).on( "load", function() {
+      $('#loader').addClass('hidden');
+      $('#kitty-img').removeClass('hidden');
+    });
