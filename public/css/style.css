@@ -152,6 +152,12 @@ input.login:focus {
 .primary-text {
   font-family: "Cambay";
   font-weight: regular;
+  font-size: 20px;
+}
+
+.secondary-text {
+  font-family: "Cambay";
+  font-weight: regular;
   font-size: 16px;
 }
 

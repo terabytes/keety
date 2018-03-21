@@ -7,8 +7,11 @@ block content
         .row.card-header
           a(href="/", style="text-decoration: none")
             h1.card-title.text-center= title
-          p.primary-text.text-center Your random keety is below.
-          p.primary-text.text-center Wait to load, click the button below for more.
+          p.primary-text.text-center Your random keety is below
+          p.secondary-text.text-center (scroll down for more)
+          p.secondary-text.text-center#hide Loading, 
+            strong click the button below 
+            | to get more cat goodness
         .row.card-block
           #loader
           img.img-responsive.center-block.animated.jello.hidden#kitty-img(src="#{link}", alt="Gif of random cat")
@@ -27,4 +30,5 @@ block content
     $(window).on( "load", function() {
       $('#loader').addClass('hidden');
       $('#kitty-img').removeClass('hidden');
+      $('#hide').addClass('hidden');
     });
