@@ -5,30 +5,19 @@ block content
     .card-columns.white-bgd.card-shadow.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
       .card
         .row.card-header
-          h1.card-title.text-center= title
+          a(href="/", style="text-decoration: none")
+            h1.card-title.text-center= title
           p.primary-text.text-center Your random keety is below
         .row.card-block
           img.img-responsive.center-block.animated.jello(src="#{link}", alt="Gif of random cat")
         .row.card-block
           .col-md-6.col-centered
             p.primary-text.primary-color.text-center= clue
-            a#kitty.btn-a.text-center(href="" onClick="playSound(#{views})")
-              .btn.charcoal-bgd.btn-primary.center-block
-                p Anotha 1!
+            audio#sound(src="/images/another12.mp3", onended="redirectHandler()", controls="false", hidden)
+            button#kitty.btn.charcoal-bgd.btn-primary.text-center.center-block(onClick="#{views} < 3 ? sound.play() : redirectHandler()") Anotha 1!
   script.
-    function playSound(views) {
-      debugger;
-      var path = "/images/another1.mp3";
-      var sound = new Audio(path);
-      sound.addEventListener('ended', redirectHandler, false);
-
-      if (views < 3) {
-        sound.play();
-      } else {
-        redirectHandler();
-      }
-    }
+    var sound = document.getElementById('sound');
 
     function redirectHandler() {
-      window.location = "/meow";
+      window.location.href = window.location.href;
     }
